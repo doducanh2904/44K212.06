@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://thuviendue.somee.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	Home Page
+</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./Home Page_files/w3.css"><link rel="stylesheet" href="./Home Page_files/css"><link rel="stylesheet" href="./Home Page_files/css(1)"><link rel="stylesheet" href="./Home Page_files/font-awesome.min.css">
+    <style>
+        .w3-sidebar a {
+            font-family: "Roboto", sans-serif
+        }
+
+        body, h1, h2, h3, h4, h5, h6, .w3-wide {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <form method="post" action="http://thuviendue.somee.com/" id="ctl01">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="G1CWc2iWtVwanSEEd68CNQ7ux+9pz7xHZyY82xZJroZr7fLtBOykMs+zk7WJ+HsEXej8BalzeU9xQmsj7mdICxQ+Go/iyDwsMf710uFZmJE=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334">
+</div>
+        <div>
+        ss
+        <!-- Sidebar/menu -->
+        <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px;padding-top: 1px;" id="mySidebar">
+            <div class="w3-container w3-display-container w3-padding-16">
+                <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+                <h3 class="w3-wide" style=" margin-top: 0px" ;=""><a href="http://due.udn.vn/"><img src="./Home Page_files/LOGO3.png"></a><b></b></h3>
+            </div>
+            <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold;">
+                <input type="text" class="w3-input w3-border" name="search" placeholder="Tìm kiếm tên sách.." style="font-size: 15px;width: 220px;margin-bottom: 10px; margin-left:10px">
+                <div class="btn">
+                    <button type="submit" class="btnstyle">Tìm kiếm</button>
+                </div>
+                <style>
+                    .btn{
+                        text-align: center;
+                    }
+                    .button {
+                        position: absolute;
+                        top: 50%;
+                    }
+                    .btnstyle {
+                        font-family: Verdana,sans-serif;line-height:1.5;
+                        font-size: 12px;
+                        background: #b5ddf5;
+                        border: none;
+                        height: 35px;
+                        width: 100px;
+                        display:inline-block
+                    }
+                </style>
+                <a href="http://thuviendue.somee.com/Default.aspx" class="w3-bar-item w3-button" style="color: black;">Trang chủ</a>
+                <!-- <a href="#" class="w3-bar-item w3-button">Dresses</	a> -->
+                <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+                    Danh mục sách <i class="fa fa-caret-down"></i>
+                </a>
+                <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+                    <a href="http://thuviendue.somee.com/Pages/Sach.aspx" class="w3-bar-item w3-button">Sách</a>
+                    <a href="http://thuviendue.somee.com/Pages/GiaoTrinh.aspx" class="w3-bar-item w3-button">Giáo trình</a>
+                    <a href="http://thuviendue.somee.com/Pages/TapChi.aspx" class="w3-bar-item w3-button">Tạp chí</a>
+                    <a href="http://thuviendue.somee.com/Pages/TruyenKich.aspx" class="w3-bar-item w3-button">Truyện, kịch</a>
+                </div>
+
+                <script>
+                    // Accordion
+                    function myAccFunc() {
+                        var x = document.getElementById("demoAcc");
+                        if (x.className.indexOf("w3-show") == -1) {
+                            x.className += " w3-show";
+                        } else {
+                            x.className = x.className.replace(" w3-show", "");
+                        }
+                    }
+
+                    // Click on the "Jeans" link on page load to open the accordion for demo purposes
+                    // document.getElementById("myBtn").click();
+
+
+                    // Open and close sidebar
+                    function w3_open() {
+                        document.getElementById("mySidebar").style.display = "block";
+                        document.getElementById("myOverlay").style.display = "block";
+                    }
+
+                    function w3_close() {
+                        document.getElementById("mySidebar").style.display = "none";
+                        document.getElementById("myOverlay").style.display = "none";
+                    }
+                </script>
+
+                <a href="http://thuviendue.somee.com/Pages/ThongBao.aspx" class="w3-bar-item w3-button" style="color: black;">Thông báo</a>
+                <a onclick="myAccFuncHuongDan()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+                    Hướng dẫn <i class="fa fa-caret-down"></i>
+
+                </a>
+                <div id="TaiHuongDan" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+                    <a href="http://thuviendue.somee.com/Download/Noi_quy_phong_doc.pdf" class="w3-bar-item w3-button" download="Nội quy thư viện">Nội quy thư viện</a>
+                    <a href="http://thuviendue.somee.com/Download/HuongDanSuDung.docx" class="w3-bar-item w3-button" download="Hướng dẫn sử dụng thư viện">Sử dụng Web thư viện</a>
+                </div>
+
+                <script>
+                    // Accordion
+                    function myAccFuncHuongDan() {
+                        var x = document.getElementById("TaiHuongDan");
+                        if (x.className.indexOf("w3-show") == -1) {
+                            x.className += " w3-show";
+                        } else {
+                            x.className = x.className.replace(" w3-show", "");
+                        }
+                    }
+
+                    // Click on the "Jeans" link on page load to open the accordion for demo purposes
+                    // document.getElementById("myBtn").click();
+
+
+                    // Open and close sidebar
+                    function w3_open() {
+                        document.getElementById("mySidebar").style.display = "block";
+                        document.getElementById("myOverlay").style.display = "block";
+                    }
+
+                    function w3_close() {
+                        document.getElementById("mySidebar").style.display = "none";
+                        document.getElementById("myOverlay").style.display = "none";
+                    }
+                </script>
+                <!-- <a href="#" class="w3-bar-item w3-button">Blazers</a>
+                <a href="#" class="w3-bar-item w3-button">Shoes</a> -->
+            </div>
+            <a href="http://thuviendue.somee.com/#footer" class="w3-bar-item w3-button w3-padding" style="color: black;font-size: 18px">Contact</a>
+            <!--  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a>  -->
+            <a href="http://thuviendue.somee.com/#" class="w3-bar-item w3-button w3-padding" style="color: black;font-size: 18px">Kho sách </a>
+            <!-- <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a> -->
+        </nav>
+
+        <!-- Top menu on small screens -->
+        <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge" style="background-color: white;">
+
+            <div class="w3-bar-item w3-padding-24 w3-wide" style="font-size: 7px;color: #00bcd4!important;line-height: -3px;"><a href="http://due.udn.vn/"></a><img src="./Home Page_files/LOGO3.png" style="height: 50px"></div>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        </header>
+
+        <!-- Overlay effect when opening sidebar on small screens -->
+        <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+        <!-- !PAGE CONTENT! -->
+        <div class="w3-main" style="margin-left:250px">
+
+            <!-- Push down content on small screens -->
+            <div class="w3-hide-large" style="margin-top:83px"></div>
+
+            <!-- Top header -->
+            <div class="container body-content">
+                
+    <header class="w3-container w3-xlarge" style="color: #2162f3f5!important;">
+        <p class="w3-left">THƯ VIỆN ONLINE</p>
+        <!-- <p class="w3-right">
+                  <i class="fa fa-shopping-cart w3-margin-right"style="background-color: #00000003!important;"></i>
+                  <a class="fa fa-search">logi</a>
+                </p> -->
+        <a href="http://thuviendue.somee.com/#" class="w3-right-2" style="float: right; padding-top: 30px; font-size: 16px;">Login</a>
+
+    </header>
+
+    <!-- Image header -->
+    <div class="w3-display-container w3-container">
+        <img src="./Home Page_files/hinhnen2.jpg" alt="Jeans" style="width: 100%; height: 500px">
+        <div class="w3-display-topleft w3-text-white" style="padding: 24px 48px;">
+            <h1 class="w3-jumbo w3-hide-small">Sách hay  </h1>
+            <h1 class="w3-hide-large w3-hide-medium">Sách hay</h1>
+            <h1 class="w3-hide-small">MỖI TUẦN</h1>
+            <p><a href="http://thuviendue.somee.com/#jeans" class="w3-button w3-black w3-padding-large w3-large">XEM NGAY</a></p>
+        </div>
+    </div>
+
+    <div class="w3-container w3-text-grey" id="jeans">
+        <p>8 items</p>
+    </div>
+
+    <!-- Product grid -->
+    <div class="w3-row w3-grayscale">
+        <div class="w3-col l3 s6">
+            <div class="w3-container">
+                <div class="w3-display-container">
+                    <a href="http://thuviendue.somee.com/ChiTietSach/Kinhte.aspx"><img src="./Home Page_files/sach.PNG" style="width: 100%"></a>
+                    <span class="w3-tag w3-display-topleft">New</span>
+                    <div class="w3-display-middle w3-display-hover">
+                        <br>
+                        <button class="w3-button w3-black">Mượn <i class="fa fa-shopping-cart"></i></button>
+                    </div>
+
+                </div>
+                <p>Giáo trình Kinh tế vi mô
+                    <br>
+                </p>
+            </div>
+            <div class="w3-container">
+                <div class="w3-display-container">
+                    <a href="http://thuviendue.somee.com/ChiTietSach/HTML.aspx"><img src="./Home Page_files/html.jpg" style="width: 100%"></a>
+                    <span class="w3-tag w3-display-topleft">New</span>
+                    <div class="w3-display-middle w3-display-hover">
+                        <br>
+                        <button class="w3-button w3-black">Mượn <i class="fa fa-shopping-cart"></i></button>
+                    </div>
+
+                </div>
+                <p>Giáo trình HTML5 &amp; CSS3
+                    <br>
+                </p>
+            </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+            <div class="w3-container">
+                <div class="w3-display-container">
+                    <a href="http://thuviendue.somee.com/ChiTietSach/KDQT.aspx"><img src="./Home Page_files/KDQT.jpg" style="width: 100%"></a>
+                    <span class="w3-tag w3-display-topleft">New</span>
+                    <div class="w3-display-middle w3-display-hover">
+                        <br>
+                        <button class="w3-button w3-black">Mượn <i class="fa fa-shopping-cart"></i></button>
+                    </div>
+
+                </div>
+                <p>Giáo trình Kinh doanh quốc tế
+                    <br>
+                </p>
+            </div>
+            <div class="w3-container">
+                <div class="w3-display-container">
+                    <a href="http://thuviendue.somee.com/ChiTietSach/LUAT.aspx"><img src="./Home Page_files/Luat.jpg" style="width: 100%"></a>
+                    <span class="w3-tag w3-display-topleft">New</span>
+                    <div class="w3-display-middle w3-display-hover">
+                        <br>
+                        <button class="w3-button w3-black">Mượn <i class="fa fa-shopping-cart"></i></button>
+                    </div>
+
+                </div>
+                <p>Giáo trình Luật hình sự
+                    <br>
+                </p>
+            </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+            <div class="w3-container">
+                <div class="w3-display-container">
+                    <a href="http://thuviendue.somee.com/ChiTietSach/Python.aspx"><img src="./Home Page_files/python.jpg" style="width: 100%"></a>
+                    <span class="w3-tag w3-display-topleft">New</span>
+                    <div class="w3-display-middle w3-display-hover">
+                        <br>
+                        <button class="w3-button w3-black">Mượn <i class="fa fa-shopping-cart"></i></button>
+                    </div>
+
+                </div>
+                <p>Giáo trình Python căn bản
+                    <br>
+                </p>
+            </div>
+            <div class="w3-container">
+                <div class="w3-display-container">
+                    <a href="http://thuviendue.somee.com/ChiTietSach/TinHoc.aspx"><img src="./Home Page_files/TinHoc.jpg" style="width: 100%"></a>
+                    <span class="w3-tag w3-display-topleft">New</span>
+                    <div class="w3-display-middle w3-display-hover">
+                        <br>
+                        <button class="w3-button w3-black">Mượn <i class="fa fa-shopping-cart"></i></button>
+                    </div>
+
+                </div>
+                <p>Giáo trình Tin học văn phòng
+                    <br>
+                </p>
+            </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+            <div class="w3-container">
+                <div class="w3-display-container">
+                    <a href="http://thuviendue.somee.com/ChiTietSach/ToanCC.aspx"><img src="./Home Page_files/Toan.jpg" style="width: 100%"></a>
+                    <span class="w3-tag w3-display-topleft">New</span>
+                    <div class="w3-display-middle w3-display-hover">
+                        <br>
+                        <button class="w3-button w3-black">Mượn <i class="fa fa-shopping-cart"></i></button>
+                    </div>
+
+                </div>
+                <p>Giáo trình Toán cao cấp
+                    <br>
+                </p>
+            </div>
+            <div class="w3-container">
+                <div class="w3-display-container">
+                    <a href="http://thuviendue.somee.com/ChiTietSach/CShare.aspx"><img src="./Home Page_files/CSharp.jpg" style="width: 100%"></a>
+                    <span class="w3-tag w3-display-topleft">New</span>
+                    <div class="w3-display-middle w3-display-hover">
+                        <br>
+                        <button class="w3-button w3-black">Mượn <i class="fa fa-shopping-cart"></i></button>
+                    </div>
+
+                </div>
+                <p>Giáo trình C# căn bản
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+            </div>
+
+            <!-- Subscribe section -->
+            <!--   <div class="w3-container w3-black w3-padding-32">
+              <h1>Subscribe</h1>
+              <p>To get special offers and VIP treatment:</p>
+              <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+              <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+            </div>
+             -->
+            <!-- Footer -->
+            <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+                <div class="w3-row-padding">
+                    <div class="w3-col s4">
+                        <h4>Contact</h4>
+                        <p>Questions? Go ahead.</p>
+                        
+                            <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required=""></p>
+                            <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required=""></p>
+                            <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required=""></p>
+                            <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required=""></p>
+                            <button type="submit" class="w3-button w3-block w3-black">Send</button>
+                        
+                    </div>
+
+                    <div class="w3-col s4">
+                        <h4>About</h4>
+                        <p><a href="http://thuviendue.somee.com/#">Về chúng tôi</a></p>
+                        <p><a href="http://thuviendue.somee.com/#">E-learning</a></p>
+                        <p><a href="http://thuviendue.somee.com/#">Hỗ trợ</a></p>
+                        <p><a href="http://thuviendue.somee.com/#">Tư vấn tuyển sinh</a></p>
+                        <p><a href="http://thuviendue.somee.com/#">Điều hành tác nghiệp</a></p>
+                        <!--   <p><a href="#">Payment</a></p>
+                        <p><a href="#">Gift card</a></p>
+                        <p><a href="#">Return</a></p>
+                        <p><a href="#">Help</a></p> -->
+                    </div>
+
+                    <div class="w3-col s4 w3-justify">
+                        <h4>Đội ngũ kĩ thuật</h4>
+                        <p><i class="fa fa-fw fa-map-marker"></i> Team44K212.06</p>
+                        <p><i class="fa fa-fw fa-phone"></i> 0333707059</p>
+                        <p style="margin-bottom: 0px"><i class="fa fa-fw fa-envelope"></i> doducanh2904@mail.com</p>
+                        <p><a style="text-decoration: none" href="https://www.facebook.com/profile.php?id=100043023576264"><img src="./Home Page_files/iconfb.png" style="height: 17px;width: 14px;"> facebook</a></p>
+                        <!-- <h4>Kênh truyền thông</h4>
+                        <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
+                        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+                        <br>5=-
+                        <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+                        <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+                        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+                        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+                        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+                        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i> -->
+                    </div>
+                </div>
+            </footer>
+
+            <div class="w3-black w3-center w3-padding-24" style="background-color: #2162f3f5!important;">Bản quyền thuộc <a href="http://due.udn.vn/" title="W3.CSS" target="_blank" class="w3-hover-opacity">due.udn.vn</a></div>
+
+            <!-- End page content -->
+        </div>
+
+        <!-- Newsletter Modal -->
+        <div id="newsletter" class="w3-modal">
+            <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+                <div class="w3-container w3-white w3-center">
+                    <i onclick="document.getElementById(&#39;newsletter&#39;).style.display=&#39;none&#39;" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+                    <h2 class="w3-wide">NEWSLETTER</h2>
+                    <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+                    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+                    <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById(&#39;newsletter&#39;).style.display=&#39;none&#39;">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+    </div></form>
+        
+        
+    
+
+
+<!--SCRIPT GENERATED BY SERVER! PLEASE REMOVE-->
+<center><a href="http://somee.com/">Web hosting by Somee.com</a></center>
+
+<script lang="JavaScript">aScr = document.createElement('script');aScr.src = location.protocol + "//ads.mgmt.somee.com/serveimages/ad2/WholeInsert5.js";document.body.appendChild(aScr);</script><script src="./Home Page_files/WholeInsert5.js.tải xuống"></script>
+<!--SCRIPT GENERATED BY SERVER! PLEASE REMOVE--><div style="height: 65px;">    </div>    <div style="opacity: 0.9; z-index: 2147483647; position: fixed; left: 0px; bottom: 0px; height: 65px; right: 0px; display: block; width: 100%; background-color: #202020; margin: 0px; padding: 0px;">    </div>    <div onmouseover="S_ssac();" onmouseout="D_ssac();" style="position: fixed; z-index: 2147483647; left: 0px; bottom: 0px; height: 65px; right: 0px; display: block; width: 100%; background-color: transparent; margin: 0px; padding: 0px;">        <div style="width: 100%; color: White; font-family: &quot;Helvetica Neue&quot;, &quot;Lucida Grande&quot;, &quot;Segoe UI&quot;, Arial, Helvetica, Verdana, sans-serif; font-size: 11pt;">            <div style="margin-right: auto; margin-left: auto; display: table;  padding:9px; font-size:13pt;">                <a href="http://somee.com/VirtualServer.aspx" style=" text-decoration: none; color:White; margin-right:6px; margin-left:6px;">Hosted Windows Virtual Server. 2.5GHz CPU, 2GB RAM, 60GB SSD. Try it now for $1!</a>             </div>            <div style="margin-right: auto; margin-left: auto; display: table; font-size: 9pt; ">                <a href="http://somee.com/" style=" text-decoration: none; color:White; margin-right:6px; margin-left:6px; font-size: 10pt;">Web hosting by Somee.com</a>            </div>        </div>    </div></body></html>
