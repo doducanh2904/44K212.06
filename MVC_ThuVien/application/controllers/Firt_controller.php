@@ -1,4 +1,4 @@
-
+O
 
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
@@ -82,14 +82,21 @@ class Firt_controller extends CI_Controller {
 		$dataAnh = explode('\\', $this->input->post('anh'));
 
 		$hinhanh= base_url()."File_upload/".$dataAnh[2];
-		//them
-		$this->load->model('Sach_model');
-		$this->Sach_model->insert($tens,$idd,$sotrang,$tentg,$thoigian,$thoigianxb,$hinhanh);
-		// if($this->Sach_model->insert($tens,$idd,$sotrang,$tentg,$thoigian,$thoigianxb,$hinhanh)){
-		// 		echo 'insert success';
-		// }
-		// else 
-		// 	{ echo "that bai";}
+		if( $sotrang==null || $tentg==null || $thoigian==null || $thoigianxb==null  )
+		{
+			echo '<script>
+					alert("Vui lòng điền đầy đủ thông tin ");
+					setTimeout(function(){
+						window.history.back();
+					},500);
+				</script>';
+		}
+		else
+		{
+		// echo $tensach;
+			$this->load->model('Sach_model');
+			$this->Sach_model->insert($tens,$idd,$sotrang,$tentg,$thoigian,$thoigianxb,$hinhanh);
+		}
 	}
 	
 	

@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
-<title> sửa  sách </title>
+<title> SHOW SEARCH DANH SÁCH CHỜ  </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" type="text/css" href="./css.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <style>
-.w3-sidebar a {font-family: "Roboto", sans-serif}
-body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+  .w3-sidebar a {font-family: "Roboto", sans-serif}
+  body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </style>
 <body class="w3-content" style="max-width:1200px;">
 
 
-<!-- Sidebar/menu -->
- <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px;padding-top: 1px;background-color: white!important;font-family:Times New Roman" id="mySidebar">
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px;padding-top: 1px;background-color: white!important;font-family:Times New Roman" id="mySidebar">
    <div class="w3-container w3-display-container w3-padding-16"style="padding-left:0px;">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
     <h3 class="w3-wide" style=" margin-top: 0px";><a href="http://due.udn.vn/"><img src="../../img/LOGO5.jpg"style ="width: 220px;height: 70px;padding-left: 0px"></a><b></b></h3>
@@ -27,12 +28,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold;padding-bottom: 30px;">
-    <div class="input-group">
-      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-      aria-describedby="search-addon" />
-      <button type="button" class="btn btn-outline-primary"><i class="fa fa-search"></i></button>
-
-    </div>
+  
 
     <a href="<?php echo base_url(); ?>index.php/ShowDataSach_controller" class="w3-bar-item w3-button"style="color: white;margin-bottom: 10px;background-color: #2162f3f5!important;margin-top: 60px;"><span class="fa fa-home"></span>  Trang chủ</a>
     <!-- <a href="#" class="w3-bar-item w3-button">Dresses</  a> -->
@@ -70,7 +66,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </div>
 </div>
 <a href="<?php echo base_url(); ?>index.php/Docgia_controller/showDocgia_controller" class="w3-bar-item w3-button"style="color:white;background-color:#2162f3f5!important;margin-bottom: 10px;"> <!-- <span class="fa fa-bell">  --> Quản lý độc giả</a>
-  <a href="<?php echo base_url(); ?>index.php/ShowDataSach_controller/showDanhsachcho" class="w3-bar-item w3-button"style="color:white ;background-color: #2162f3f5!important"> <!-- <img src="./img/icon.png"style="height: 20px;width: 20px"> --> Danh sách chờ mượn </a>
+  <a href="#" class="w3-bar-item w3-button"style="color:white ;background-color: #2162f3f5!important"> <!-- <img src="./img/icon.png"style="height: 20px;width: 20px"> --> Danh sách chờ mượn </a>
 
 </div>
 <div style=" width: 220px;
@@ -84,10 +80,10 @@ height: 120px;">
 
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-	<div class="abc"style="width: 100%;margin-bottom: 20px;">
-	
-  <div class="w3-bar-item w3-padding-24 w3-wide"style="font-size: 7px;color: #00bcd4!important;line-height: -3px;background-color: white;;"><a href="http://due.udn.vn/"></a><img src="./img/LOGO3.png"style="height: 30px;padding-top: 0px"></div>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+  <div class="abc"style="width: 100%;margin-bottom: 20px;">
+
+    <div class="w3-bar-item w3-padding-24 w3-wide"style="font-size: 7px;color: #00bcd4!important;line-height: -3px;background-color: white;;"><a href="http://due.udn.vn/"></a><img src="./img/LOGO3.png"style="height: 30px;padding-top: 0px"></div>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
   </div>
 </header>
 
@@ -101,96 +97,73 @@ height: 120px;">
   <div class="w3-hide-large" style="margin-top:83px"></div>
   
   <!-- Top header -->
-  <header class="w3-container w3-xlarge"style="color: black;background-color: #2162f3f5!important;margin-bottom:30px;margin-top: 20px;height: 50px;">
-  
-<div class="gg">
-    <p class="w3-left"style="background-color: #2162f3f5!important;color: white;margin-top: 10px ">THƯ VIỆN ONLINE <!-- <img src="..\webbb\img\THUVIENONLINE.png"> --></p>
-    <!-- <p class="w3-right">
-      <i class="fa fa-shopping-cart w3-margin-right"style="background-color: #00000003!important;"></i>
-      <a class="fa fa-search">logi</a>
-    </p> -->
+  <header style="width: 100%;height: 10vh; color: black;background-color: #2162f3f5!important; margin-bottom: 3vh">
+    <p class="w3-left"style="background-color: #2162f3f5!important;color: white;line-height: 10vh;padding-left: 10px">THƯ VIỆN ONLINE </p>
+    <a href="#"style = "float: right;font-size: 16px;color: white;text-decoration: none;line-height: 10vh; padding-right: 10px"><span class="sign-in-alt"></span>Login </a>
 
- </div>
- <div class="a"style="height: 414px;width: 600px;margin-left: 100px;margin-top: 100px">
-   <form action="<?php echo base_url(); ?>index.php/Admin_Sach_controller/editSach_controller" method="post" enctype="multipart/form-data">
-      <?php foreach ($mangketqua as $key => $value): ?>
-        <div class="input-group mb-3" hidden="">
- 
-  
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">id sách</span>
-  </div>
-  <input name="idsach" type="text" class="form-control"value="<?php echo $value['id_sach'] ?>" placeholder="" aria-label="nhập tên sách" aria-describedby="basic-addon1">
-</div>
-<div class="input-group mb-3">
- 
-  
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1" >Tên sách</span>
-  </div>
-  <input name="tensach" type="text" class="form-control"value="<?php echo $value['tensach'] ?>" placeholder="" aria-label="nhập tên sách" aria-describedby="basic-addon1">
-</div>
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">id danh mục  </span>
-  </div>
-  <input name="iddanhmuc" type="text" class="form-control"value="<?php echo $value['id_danhmuc'] ?>" placeholder="" aria-label="username" aria-describedby="basic-addon1">
-</div>
- <div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">số trang sách</span>
-  </div>
-  <input name="sotrang" type="text" class="form-control"value="<?php echo $value['sotrang_sach'] ?>" placeholder=" " aria-label="username" aria-describedby="basic-addon1">
-</div>
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">tên tác giả </span>
-  </div>
-  <input name="tentacgia" type="text" class="form-control"value="<?php echo $value['tentacgia'] ?>" placeholder="" aria-label="username" aria-describedby="basic-addon1">
-</div>
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">thời gian được mượn </span>
-  </div>
-  <input name="thoigianduocmuon" type="text" class="form-control"value="<?php echo $value['thoigianduocmuon'] ?>" placeholder=" " aria-label="username" aria-describedby="basic-addon1">
-</div>
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">thòi gian xuất bản</span>
-  </div>
-  <input name="thoigianxuatban" type="text" class="form-control"value="<?php echo $value['thoigianxuatban'] ?>" placeholder=" " aria-label="username" aria-describedby="basic-addon1">
-</div>
-  <div class="custom-file" >
-                <input  name="anh" id="anh" type="file" multiple="multiple" style="opacity: 1;height: 100%; padding: 0.3rem;font-size: 15px;margin: auto; vertical-align: middle;" class="custom-file-input"  id="profile_image">
-                  <label class="custom-file-label" for="customFile"style="font-size: 15px"></label>
-               </div>
-	<input type="submit"  class="btn btn-primary btn-sm" value="Save"/>
-</div>
 
-  
-<?php endforeach ?>
 
-</form>
+
+    <!-- Image header -->
+
+
   </header>
 
+  <p style="font-size: 24px">Kết quả tìm kiếm   </p>
+  <div class="a"style="width: 800px;margin-left: 100px;margin-top: 100px">
+
+    
+     <?php $i=1 ?>
+   
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">STT</th>
+          <th scope="col">ID Độc giả</th>
+          <th scope="col">ID sách</th>
+           <th scope="col">Ngày mượn</th>
+          <th scope="col">Ngày trả</th>
+        
+       
+         
+          
+        </tr>
+      </thead>
+
+      <tbody>
+
+         <?php foreach ($data as $key => $value): ?>
+        <tr>
+          <td><?php echo $i++ ?></td>
+         <td><?php echo $value['id_docgia'] ?></td>
+         
+          <td><?php echo $value['id_sach'] ?></td>
+          <td><?php echo $value['ngaymuon_muon'] ?></td>
+        
+          <td><?php echo $value['ngaytra_muon'] ?></td>
+        
+        
+       
+        </tr>
+        <?php endforeach ?>
 
 
+
+      </tbody>
+    </table>
+    
  
 
-  <!-- Footer -->
-  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer"style ="width: 100%;padding-right: 90px;padding-top: 0px;margin-top: 550px;">
+  </div>
+
+
+
+
+
+
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer"style ="width: 100%;padding-right: 90px;padding-top: 50px;height: ;">
     <div class="w3-row-padding">
-      <div class="w3-col s4">
-        <h4>Contact</h4>
-        <p>Questions? Go ahead.</p>
-        <form action="/action_page.php" target="_blank">
-          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
-          <button type="submit" class="w3-button w3-block w3-black">Send</button>
-        </form>
-      </div>
+
 
       <div class="w3-col s4">
         <h4>About</h4>
@@ -202,13 +175,13 @@ height: 120px;">
 
       </div>
 
-      <div class="w3-col s4 w3-justify">
+      <div class="w3-col s4 w3-justify"style = "margin-left: 200px">
         <h4>Đội ngũ kĩ thuật</h4>
         <p><i class="fa fa-fw fa-map-marker"></i> Team44K212.06</p>
         <p><i class="fa fa-fw fa-phone"></i> 0333707059</p>
         <p style = "margin-bottom: 0px"><i class="fa fa-fw fa-envelope"></i> doducanh2904@mail.com</p>
-        <p><a style="text-decoration: none" href="https://www.facebook.com/profile.php?id=100043023576264"style = "height: 36px;width: 200px;margin-top: 12px;"><img src=".s/img/iconfb.png"style = "height: 17px;width: 14px;"> facebook</a></p>
-       
+        <p><a style="text-decoration: none" href="https://www.facebook.com/profile.php?id=100043023576264"style = "height: 36px;width: 200px;margin-top: 12px;"><img src="./img/iconfb.png"style = "height: 17px;width: 14px;"> facebook</a></p>
+
       </div>
     </div>
   </footer>
@@ -251,7 +224,7 @@ function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
   document.getElementById("myOverlay").style.display = "block";
 }
- 
+
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
@@ -260,4 +233,3 @@ function w3_close() {
 
 </body>
 </html>
-

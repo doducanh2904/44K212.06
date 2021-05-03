@@ -1,10 +1,23 @@
+
+<?php 
+    require('application/models/Cart.php');
+
+    $CI = & get_instance();
+    $CI->load->library('session'); 
+    if(!$CI->session->userdata('docgia')){
+      header('Location:../LoginUser_controller');
+      exit();
+     }
+
+ ?>
+
 <!DOCTYPE html>
 <html>
-<title>ADMIN </title>
+<title>Độc giả  </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" type="text/css" href="./css.css">
+<!-- <link rel="stylesheet" type="text/css" href="./css.css"> -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -15,7 +28,6 @@
   .w3-sidebar a {font-family: "Roboto", sans-serif}
   body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </style>
-
 <body class="w3-content" style="max-width:1200px;">
 
 
@@ -28,8 +40,8 @@
   <div class="input-group">
 
   </div>
-  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold;padding-bottom: 30px;">
-    <form action="<?php echo base_url(); ?>index.php/ShowDataSach_controller/search_controller" method="get"enctype="multipart/form-data">
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold;padding-bottom: 0px;">
+    <form action="search_controller" method="get"enctype="multipart/form-data">
     <div class="input-group">
       
       <input type="search"name="search" class="form-control rounded" placeholder="Search" aria-label="Search"
@@ -38,7 +50,7 @@
     </div>
      </form>
 
-    <a href="<?php echo base_url(); ?>index.php/ShowDataSach_controller" class="w3-bar-item w3-button"style="color: white;margin-bottom: 10px;background-color: #2162f3f5!important;margin-top: 60px;"><span class="fa fa-home"></span>  Trang chủ</a>
+    <a href="<?php echo base_url(); ?>index.php/User_controller" class="w3-bar-item w3-button"style="color: white;margin-bottom: 10px;background-color: #2162f3f5!important;margin-top: 60px;"><span class="fa fa-home"></span>  Trang chủ</a>
     <!-- <a href="#" class="w3-bar-item w3-button">Dresses</	a> -->
 
     	<div class="danhmuc"style="background-color: #2162f3f5!important;">
@@ -47,25 +59,25 @@
         </a>
         <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium"style="background-color: white;">
 
-         <form action="<?php echo base_url(); ?>index.php/Admin_Sach_controller/sach" id="books-info" method="post" enctype="multipart/form-data">
+         <form action="../admin_Sach_controller/sach" id="books-info" method="post" enctype="multipart/form-data">
           <div class="input-group mb-3">
             <input type="submit" name="iddanhmucs" id="iddanhmucc" type="text"class="btn btn-primary btn-sm" value='DM001' >
           </div>
         </form> 
 
-        <form action="<?php echo base_url(); ?>index.php/Admin_Sach_controller/giaotrinh" id="books-info" method="post" enctype="multipart/form-data">
+        <form action="../admin_Sach_controller/giaotrinh" id="books-info" method="post" enctype="multipart/form-data">
          <div class="input-group mb-3">
           <input type="submit" name="iddanhmucgt" id="iddanhmuc" type="text"class="btn btn-primary btn-sm" value='DM002' >
         </div>
       </form> 
 
-      <form action="<?php echo base_url(); ?>index.php/Admin_Sach_controller/tapchi" id="books-info" method="post" enctype="multipart/form-data">
+      <form action="../admin_Sach_controller/tapchi" id="books-info" method="post" enctype="multipart/form-data">
        <div class="input-group mb-3">
         <input type="submit" name="iddanhmuctc" id="iddanhmuc" type="text"class="btn btn-primary btn-sm" value='DM003' >
       </div>
     </form> 
 
-    <form action="<?php echo base_url(); ?>index.php/Admin_Sach_controller/truyenkich" id="books-info" method="post" enctype="multipart/form-data">
+    <form action="../admin_Sach_controller/truyenkich" id="books-info" method="post" enctype="multipart/form-data">
      <div class="input-group mb-3">
       <input type="submit" name="iddanhmuctk" id="iddanhmuc" type="text"class="btn btn-primary btn-sm" value='DM004' >
     </div>
@@ -73,16 +85,30 @@
 
 </div>
 </div>
-<a href="<?php echo base_url(); ?>index.php/Docgia_controller/showDocgia_controller" class="w3-bar-item w3-button"style="color:white;background-color:#2162f3f5!important;margin-bottom: 10px;"> <!-- <span class="fa fa-bell">  --> Quản lý độc giả</a>
-  <a href="<?php echo base_url(); ?>index.php/ShowDataSach_controller/showDanhsachcho" class="w3-bar-item w3-button"style="color:white ;background-color: #2162f3f5!important"> <!-- <img src="./img/icon.png"style="height: 20px;width: 20px"> --> Danh sách chờ mượn </a>
+<?php 
+          $CI = & get_instance();
+          $CI->load->library('session');  //change from $this->load->library('session');
+          // print_r($CI->session->userdata('user'));
+          if($CI->session->userdata('docgia')){
+              $userInfor = $CI->session->userdata('docgia')['ketqua'];
+              // print_r($CI->session->userdata('docgia'));
+               // $userInfor);
 
-</div>
-<div style=" width: 220px;
-height: 120px;">
-<a href="<?php echo base_url(); ?>index.php/Firt_controller/" class="w3-bar-item w3-button w3-padding"style="color: #2162f3f5!important;font-size: 18px">Thêm sách</a> 
+        ?>
 
-<a href="<?php echo base_url(); ?>index.php/Docgia_controller/" class="w3-bar-item w3-button w3-padding"style="color: #2162f3f5!important;font-size: 18px;padding-top: 0px;">Thêm độc giả  </a>
-</div>
+ </div>
+    <a href="./thongbao.html" class="w3-bar-item w3-button"style="color:white;background-color:#2162f3f5!important;margin-bottom: 10px;"> <span class="fa fa-bell">  Thông báo</a>
+    <a href="#" class="w3-bar-item w3-button"style="color:white ;background-color: #2162f3f5!important"> <img src="./img/icon.png"style="height: 20px;width: 20px">   Hướng dẫn</a>
+
+  </div>
+  <div style=" width: 220px;
+    height: 120px;">
+  <a href="<?php echo base_url(); ?>index.php/User_controller/cart" class="w3-bar-item w3-button w3-padding"style="color: #2162f3f5!important;font-size: 18px">cart</a> 
+
+   <a href="<?php echo base_url(); ?>index.php/Lichsu_controller/showLichsuUser/<?php echo $userInfor['id_docgia']; ?>" class="w3-bar-item w3-button w3-padding"style="color: #2162f3f5!important;font-size: 18px;padding-top: 0px;">Lịch sử đặt sách </a>
+   <a href="<?php echo base_url(); ?>index.php/User_controller/thongbaoUser/<?php echo $userInfor['id_docgia']; ?>" class="w3-bar-item w3-button w3-padding"style="color: #2162f3f5!important;font-size: 18px">Thông báo từ admin</a> 
+   </div>
+
 
 </nav>
 
@@ -106,30 +132,21 @@ height: 120px;">
   
   <!-- Top header -->
   <header style="width: 100%;overflow-y: hidden; color: black; margin-bottom: 3vh">
-    <div style="height: 10vh;background-color: #2162f3f5!important;">
-        <p class="w3-left"style="color: white;line-height: 10vh;padding-left: 10px">THƯ VIỆN ONLINE </p>
-       <?php 
-          $CI = & get_instance();
-          $CI->load->library('session');  //change from $this->load->library('session');
-          // print_r($CI->session->userdata('user'));
-          if($CI->session->userdata('user')){
-              $userInfor = $CI->session->userdata('user');
-              
-               // $userInfor);
-
-        ?>
+    <div style="height: 10vh;background-color: ;">
+        <p class="w3-left"style="color: #2196f3;line-height: 10vh;padding-left: 10px">THƯ VIỆN ONLINE </p>
+       
         
 
 
-            <span style="color: white;line-height: 10vh;text-align: center;margin-left: 550px">Nhân Viên: <?php echo $userInfor['tennhanvien']; ?></span>
-             <a href="<?php echo base_url(); ?>index.php/LoginController/logout" style = "float: right;font-size: 16px;color: white;text-decoration: none;line-height: 10vh; padding-right: 10px">Logout </a>
+            <span style="color: #2196f3;line-height: 10vh;text-align: center;float: right;"> <?php echo $userInfor['ten_docgia']; ?></span>
+             <a href="<?php echo base_url(); ?>index.php/LoginUser_controller/logout" style = "float: right;font-size: 16px;color: #2196f3;text-decoration: none;line-height: 10vh; padding-right: 10px">Logout </a>
           <?php 
               
           }
           else{
 
             ?>
-             <a href="<?php echo base_url(); ?>index.php/LoginController" style = "float: right;font-size: 16px;color: white;text-decoration: none;line-height: 10vh; padding-right: 10px">Login </a>
+             <a href="<?php echo base_url(); ?>index.php/LoginUser_controller" style = "float: right;font-size: 16px;color: #2196f3;text-decoration: none;line-height: 10vh; padding-right: 10px">Login </a>
             <?php
           }
           
@@ -137,6 +154,7 @@ height: 120px;">
        
 
     </div>
+
     <!-- Image header -->
     <div class="w3-display-container w3-container">
       <img src="http://due.udn.vn/Portals/0/Banner Truong/tvts_2021.jpg" alt="Jeans" style="width:100%;height: 500px">
@@ -148,9 +166,10 @@ height: 120px;">
   </header>
 
  <div class="container" style="max-width: 100%">
-        <div class="row text-center">
-           <form action="ShowDataSach_controller/"></form>
-           <?php foreach ($datacontroller as $key => $value): ?>
+       <div class="row text-center">
+           <?php 
+    		//require('application\models\Cart.php');	
+           	foreach ($datacontroller as $key => $value): ?>
             <?php if ($key==8 ):break; ?>
             <?php endif ?>
             
@@ -161,13 +180,22 @@ height: 120px;">
                     <img src="<?php echo $value['hinhanh'] ?>" style="width: 50%;height: auto">
                   </a>
                   <p style="margin-bottom: 0"><?php echo $value['tensach'] ?></p>
-                  <a href="<?php echo base_url(); ?>index.php/Admin_Sach_controller/deleteSach_controller/<?php echo $value['id_sach'] ?>">Xoá</a>   
-                  <a href="<?php echo base_url(); ?>index.php/Admin_Sach_controller/showSachEdit_controller/<?php echo $value['id_sach'] ?>">Sửa</a>
+
+                  <?php 
+                  		$hinhanh = str_replace('/','-',$value['hinhanh']);
+                  		$infor = str_replace('/','-','http://localhost/MVC_ThuVien/index.php/Admin_Sach_controller/chitietSach_controller/'.$value['id_sach']);
+
+                  		$dataCart = new Cart($value['id_sach'],$value['tensach'],$hinhanh,$infor);
+                  		// echo $dataCart->toString();
+                   ?>
+
+                  <a href="<?php echo base_url(); ?>index.php/User_controller/addGiohang_controller/<?php echo $dataCart->getIdSach() ?>" >add cart</a>   
+                  
                 </div>
             </div>
             
           <?php endforeach ?> 
-        </div>
+        </div> 
 
       </div>
 

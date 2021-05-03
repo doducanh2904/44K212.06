@@ -32,29 +32,50 @@
   
 </div>
 
-    <a href="./Thu_thu_controller" class="w3-bar-item w3-button"style="color: white;margin-bottom: 10px;background-color: #2162f3f5!important;margin-top: 60px;"><span class="fa fa-home"></span>  Trang chủ</a>
+    <a href="<?php echo base_url(); ?>index.php/ShowDataSach_controller/" class="w3-bar-item w3-button"style="color: white;margin-bottom: 10px;background-color: #2162f3f5!important;margin-top: 60px;"><span class="fa fa-home"></span>  Trang chủ</a>
     <!-- <a href="#" class="w3-bar-item w3-button">Dresses</  a> -->
     
-      <div class="danhmuc"style="background-color: #2162f3f5!important;">
-    <a onclick="myAccFunc()" href="javascript:void(0)"style="color:white;margin-bottom: 10px;" class="w3-button w3-block w3-white w3-left-align" id="myBtn">  <!-- <span class="fa fa-list"> -->  Quản lý danh mục <i class="fa fa-caret-down"></i>
+  <!--     <div class="danhmuc"style="background-color: #2162f3f5!important;">
+    <a onclick="myAccFunc()" href="javascript:void(0)"style="color:white;margin-bottom: 10px;" class="w3-button w3-block w3-white w3-left-align" id="myBtn">  <!<span class="fa fa-list"> -->  <!-- Quản lý danh mục <i class="fa fa-caret-down"></i> -->
      
-    </a>
-    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium"style="background-color: white;">
-      <a href="./sach.html" class="w3-bar-item w3-buttn w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Sách</a>
-      <a href="#" class="w3-bar-item w3-button">Giáo trình</a>
-      <a href="#" class="w3-bar-item w3-button">Tạp chí</a>
-      <a href="#" class="w3-bar-item w3-button">Truyện, kịch</a>
-    </div>
-    </div>
-    <a href="./thongbao.html" class="w3-bar-item w3-button"style="color:white;background-color:#2162f3f5!important;margin-bottom: 10px;"> <!-- <span class="fa fa-bell">  --> Quản lý độc giả</a>
-    <a href="#" class="w3-bar-item w3-button"style="color:white ;background-color: #2162f3f5!important"> <!-- <img src="./img/icon.png"style="height: 20px;width: 20px"> --> Danh sách chờ mượn </a>
+    <!-- </a> -->
+      <!-- <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium"style="background-color: white;"> --> 
+
+         <!--   <form action="../admin_Sach_controller/sach" id="books-info" method="post" enctype="multipart/form-data">
+            <div class="input-group mb-3">
+              <input type="submit" name="iddanhmuc" id="iddanhmuc" type="text"class="btn btn-primary btn-sm" value='DM001' >
+            </div>
+           </form>  -->
+
+       <!--     <form action="../admin_Sach_controller/giaotrinh" id="books-info" method="post" enctype="multipart/form-data">
+             <div class="input-group mb-3">
+              <input type="submit" name="iddanhmucgt" id="iddanhmucc" type="text"class="btn btn-primary btn-sm" value='DM002' >
+            </div>
+           </form> 
+
+          <form action="../admin_Sach_controller/tapchi" id="books-info" method="post" enctype="multipart/form-data">
+             <div class="input-group mb-3">
+              <input type="submit" name="iddanhmuctc" id="iddanhmucc" type="text"class="btn btn-primary btn-sm" value='DM003' >
+            </div>
+          </form> 
+
+            <form action="../admin_Sach_controller/truyenkich" id="books-info" method="post" enctype="multipart/form-data">
+             <div class="input-group mb-3">
+              <input type="submit" name="iddanhmuctk" id="iddanhmucc" type="text"class="btn btn-primary btn-sm" value='DM004' >
+            </div>
+           </form> --> 
+       
+      <!-- </div> -->
+    <!-- </div> -->
+    <a href="<?php echo base_url(); ?>index.php/Docgia_controller/showDocgia_controller" class="w3-bar-item w3-button"style="color:white;background-color:#2162f3f5!important;margin-bottom: 10px;"> <!-- <span class="fa fa-bell">  --> Quản lý độc giả</a>
+    <a href="<?php echo base_url(); ?>index.php/ShowDataSach_controller/showDanhsachcho" class="w3-bar-item w3-button"style="color:white ;background-color: #2162f3f5!important"> <!-- <img src="./img/icon.png"style="height: 20px;width: 20px"> --> Danh sách chờ mượn </a>
 
   </div>
   <div style=" width: 220px;
     height: 120px;">
-  <a href="./Firt_controller" class="w3-bar-item w3-button w3-padding"style="color: #2162f3f5!important;font-size: 18px">Thêm sách</a> 
+  <a href="<?php echo base_url(); ?>index.php/Firt_controller/" class="w3-bar-item w3-button w3-padding"style="color: #2162f3f5!important;font-size: 18px">Thêm sách</a> 
 
-   <a href="./kho_sach.html" class="w3-bar-item w3-button w3-padding"style="color: #2162f3f5!important;font-size: 18px;padding-top: 0px;">Thêm độc giả  </a>
+   <a href="<?php echo base_url(); ?>index.php/Docgia_controller/" class="w3-bar-item w3-button w3-padding"style="color: #2162f3f5!important;font-size: 18px;padding-top: 0px;">Thêm độc giả  </a>
    </div>
 
 </nav>
@@ -75,9 +96,11 @@
                <i class="fa fa-shopping-cart w3-margin-right"style="background-color: #00000003!important;"></i>
                <a class="fa fa-search">logi</a>
                </p> -->
-            <a href="#"class="w3-right-2"style = "float: right;padding-top: 0px;font-size: 16px;margin-top: 10px;color: white">Login   <img src="./img/icondangnhap.jpg"style="height: 30px;width: 29px;"></a>
+           
          </div>
+
          <div class="a"style="height: 414px;width: 600px;margin-left: 100px;margin-top: 100px">
+          <div><p style="float: center;background-color: #ff5722d9;text-align: center">Thêm Sách</p></div>
             <form action="" id="books-info" method="post" enctype="multipart/form-data">
                <div class="input-group mb-3">
                   <div class="input-group-prepend">
@@ -85,11 +108,17 @@
                   </div>
                   <input name="tensach" id="tensach" type="text" class="form-control" placeholder="" aria-label="nhập tên sách" aria-describedby="basic-addon1">
                </div>
-                   <div class="input-group mb-3">
+                <div class="input-group mb-3">
                   <div class="input-group-prepend">
                      <span class="input-group-text" id="basic-addon1">ID Danh mục</span>
                   </div>
-                  <input name="tensach" id="tensach" type="text" class="form-control" placeholder="" aria-label="nhập tên sách" aria-describedby="basic-addon1">
+                  <select name="iddanhmuc" id="iddanhmuc" class="form-control" > 
+                    <option value="DM001">Sách(DM001)</option>
+                    <option value="DM002">Giáo trình(DM002)</option>
+                    <option value="DM003">Tạp chí(DM003)</option>
+                    <option value="DM004">Truyện, kịch(DM004)</option>
+                  </select>
+                  
                </div>
   
   
@@ -97,7 +126,7 @@
                   <div class="input-group-prepend">
                      <span class="input-group-text" id="basic-addon1">Số trang sách </span>
                   </div>
-                  <input name="sotrang" id="sotrang" type="text" class="form-control" placeholder=" " aria-label="username" aria-describedby="basic-addon1">
+                  <input name="sotrang" id="sotrang" type="number"min='1' class="form-control" placeholder=" " aria-label="username" aria-describedby="basic-addon1">
                </div>
                <div class="input-group mb-3">
                   <div class="input-group-prepend">
@@ -109,7 +138,7 @@
                   <div class="input-group-prepend">
                      <span class="input-group-text" id="basic-addon1">Thời gian được mượn</span>
                   </div>
-                  <input name="thoigianduocmuon" id="thoigianduocmuon" type="text" class="form-control" placeholder=" " aria-label="username" aria-describedby="basic-addon1">
+                  <input name="thoigianduocmuon" id="thoigianduocmuon" type="number"min='1' class="form-control" placeholder=" " aria-label="username" aria-describedby="basic-addon1">
                </div>
                <div class="input-group mb-3">
                   <div class="input-group-prepend">
@@ -117,8 +146,8 @@
                   </div>
                   <input name="thoigianxuatban" id="thoigianxuatban" type="date" class="form-control" placeholder=" " aria-label="username" aria-describedby="basic-addon1">
                </div>
-               <div class="custom-file"style="height: 35.75px">
-                  <input name="anh" id="anh" type="file" class="custom-file-input" multiple="multiple" style="height: 35.75px;padding-left: 0px;padding-bottom: 0px;padding-right: 0px;padding-top: 0px" id="profile_image">
+               <div class="custom-file" >
+                <input  name="anh" id="anh" type="file" multiple="multiple" style="opacity: 1;height: 100%; padding: 0.3rem;font-size: 15px;margin: auto; vertical-align: middle;" class="custom-file-input"  id="profile_image">
                   <label class="custom-file-label" for="customFile"style="font-size: 15px"></label>
                </div>
                <input type="submit"  class="btn btn-primary btn-sm" value="Save" />
@@ -218,30 +247,38 @@
                   var thoigianduocmuon = $("#thoigianduocmuon").val();;
                   var thoigianxuatban= $("#thoigianxuatban").val();
                   var anh = $("#anh").val();
+                 
 
-                  console.log(tensach + " , " + iddanhmuc + "," + sotrang +","+tentacgia+","+thoigianduocmuon+","+thoigianxuatban+","+anh);
+                  console.log(tensach + "," + iddanhmuc + "," + sotrang +","+tentacgia+","+thoigianduocmuon+","+thoigianxuatban+","+anh);
 
-                  $.ajax({
-                      type: "POST",
-                      url: 'insertData_controller',
-                      data: {
-                        tensach:tensach,
-                        iddanhmuc:iddanhmuc,
-                        sotrang:sotrang,
-                        tentacgia,tentacgia,
-                        thoigianduocmuon:thoigianduocmuon,
-                        thoigianxuatban:thoigianxuatban,
-                        anh:anh
-                      },
-                      success:function(data)
-                      {
-                          alert('THÊM SÁCH THÀNH CÔNG ');
-                      },
-                      error:function()
-                      {
-                          alert('THÊM SÁCH THẤT BẠI ');
-                      }
-                  });
+                  if(tensach == '' || iddanhmuc == '' || sotrang=='' || tentacgia=='' || thoigianduocmuon=='' || thoigianxuatban=='' || anh ==''){
+                    alert('Nhập thiếu thông tin');
+                  }
+                  else{
+                      $.ajax({
+                        type: "POST",
+                        url: 'insertData_controller',
+                        data: {
+                          tensach:tensach,
+                          iddanhmuc:iddanhmuc,
+                          sotrang:sotrang,
+                          tentacgia:tentacgia,
+                          thoigianduocmuon:thoigianduocmuon,
+                          thoigianxuatban:thoigianxuatban,
+                          anh:anh
+                        },
+                        success:function(data)
+                        {
+                            alert('THÊM SÁCH THÀNH CÔNG ');
+                        },
+                        error:function(e)
+                        {
+                            alert('THÊM SÁCH THẤT BẠI ');
+                        }
+                    });
+                  }
+
+                  
               });
           });
       </script>

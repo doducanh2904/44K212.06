@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>ADMIN </title>
+<title> SỬA ĐỘC GIẢ  </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -15,7 +15,6 @@
   .w3-sidebar a {font-family: "Roboto", sans-serif}
   body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </style>
-
 <body class="w3-content" style="max-width:1200px;">
 
 
@@ -23,25 +22,23 @@
   <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px;padding-top: 1px;background-color: white!important;font-family:Times New Roman" id="mySidebar">
    <div class="w3-container w3-display-container w3-padding-16"style="padding-left:0px;">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-    <h3 class="w3-wide" style=" margin-top: 0px";><a href="http://due.udn.vn/"><img src="../img/LOGO5.jpg"style ="width: 220px;height: 70px;padding-left: 0px"></a><b></b></h3>
+    <h3 class="w3-wide" style=" margin-top: 0px";><a href="http://due.udn.vn/"><img src="../../img/LOGO5.jpg"style ="width: 220px;height: 70px;padding-left: 0px"></a><b></b></h3>
   </div>
   <div class="input-group">
 
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold;padding-bottom: 30px;">
-    <form action="<?php echo base_url(); ?>index.php/ShowDataSach_controller/search_controller" method="get"enctype="multipart/form-data">
     <div class="input-group">
-      
-      <input type="search"name="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
       aria-describedby="search-addon" />
-      <button type="submit" class="btn btn-outline-primary"><i class="fa fa-search"></i></button>
+      <button type="button" class="btn btn-outline-primary"><i class="fa fa-search"></i></button>
+
     </div>
-     </form>
 
     <a href="<?php echo base_url(); ?>index.php/ShowDataSach_controller" class="w3-bar-item w3-button"style="color: white;margin-bottom: 10px;background-color: #2162f3f5!important;margin-top: 60px;"><span class="fa fa-home"></span>  Trang chủ</a>
-    <!-- <a href="#" class="w3-bar-item w3-button">Dresses</	a> -->
+    <!-- <a href="#" class="w3-bar-item w3-button">Dresses</  a> -->
 
-    	<div class="danhmuc"style="background-color: #2162f3f5!important;">
+      <div class="danhmuc"style="background-color: #2162f3f5!important;">
         <a onclick="myAccFunc()" href="javascript:void(0)"style="color:white;margin-bottom: 10px;" class="w3-button w3-block w3-white w3-left-align" id="myBtn">  <!-- <span class="fa fa-list"> -->  Quản lý danh mục <i class="fa fa-caret-down"></i>
 
         </a>
@@ -88,9 +85,9 @@ height: 120px;">
 
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-	<div class="abc"style="width: 100%;margin-bottom: 20px;">
+  <div class="abc"style="width: 100%;margin-bottom: 20px;">
 
-    <div class="w3-bar-item w3-padding-24 w3-wide"style="font-size: 7px;color: #00bcd4!important;line-height: -3px;background-color: white;;"><a href="http://due.udn.vn/"></a><img src="../../img/LOGO3.png"style="height: 30px;padding-top: 0px"></div>
+    <div class="w3-bar-item w3-padding-24 w3-wide"style="font-size: 7px;color: #00bcd4!important;line-height: -3px;background-color: white;;"><a href="http://due.udn.vn/"></a><img src="./img/LOGO3.png"style="height: 30px;padding-top: 0px"></div>
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
   </div>
 </header>
@@ -105,71 +102,53 @@ height: 120px;">
   <div class="w3-hide-large" style="margin-top:83px"></div>
   
   <!-- Top header -->
-  <header style="width: 100%;overflow-y: hidden; color: black; margin-bottom: 3vh">
-    <div style="height: 10vh;background-color: #2162f3f5!important;">
-        <p class="w3-left"style="color: white;line-height: 10vh;padding-left: 10px">THƯ VIỆN ONLINE </p>
-       <?php 
-          $CI = & get_instance();
-          $CI->load->library('session');  //change from $this->load->library('session');
-          // print_r($CI->session->userdata('user'));
-          if($CI->session->userdata('user')){
-              $userInfor = $CI->session->userdata('user');
-              
-               // $userInfor);
-
-        ?>
+  <header style="width: 100%;height: 10vh; color: black;background-color: #2162f3f5!important; margin-bottom: 3vh">
+        <p class="w3-left"style="background-color: #2162f3f5!important;color: white;line-height: 10vh;padding-left: 10px">THƯ VIỆN ONLINE </p>
         
 
 
-            <span style="color: white;line-height: 10vh;text-align: center;margin-left: 550px">Nhân Viên: <?php echo $userInfor['tennhanvien']; ?></span>
-             <a href="<?php echo base_url(); ?>index.php/LoginController/logout" style = "float: right;font-size: 16px;color: white;text-decoration: none;line-height: 10vh; padding-right: 10px">Logout </a>
-          <?php 
-              
-          }
-          else{
 
-            ?>
-             <a href="<?php echo base_url(); ?>index.php/LoginController" style = "float: right;font-size: 16px;color: white;text-decoration: none;line-height: 10vh; padding-right: 10px">Login </a>
-            <?php
-          }
-          
-       ?>
-       
 
-    </div>
     <!-- Image header -->
-    <div class="w3-display-container w3-container">
-      <img src="http://due.udn.vn/Portals/0/Banner Truong/tvts_2021.jpg" alt="Jeans" style="width:100%;height: 500px">
-      <div class="w3-display-topleft w3-text-white" style="padding:24px 48px;">
 
-      </div>
-    </div>
 
   </header>
-
- <div class="container" style="max-width: 100%">
-        <div class="row text-center">
-           <form action="ShowDataSach_controller/"></form>
-           <?php foreach ($datacontroller as $key => $value): ?>
-            <?php if ($key==8 ):break; ?>
-            <?php endif ?>
-            
-
-            <div class="col-3 text-center" style="margin-bottom: 5vh">
-                <div class="w3-display-container">
-                  <a href="<?php echo base_url(); ?>index.php/Admin_Sach_controller/chitietSach_controller/<?php echo $value['id_sach'] ?>">
-                    <img src="<?php echo $value['hinhanh'] ?>" style="width: 50%;height: auto">
-                  </a>
-                  <p style="margin-bottom: 0"><?php echo $value['tensach'] ?></p>
-                  <a href="<?php echo base_url(); ?>index.php/Admin_Sach_controller/deleteSach_controller/<?php echo $value['id_sach'] ?>">Xoá</a>   
-                  <a href="<?php echo base_url(); ?>index.php/Admin_Sach_controller/showSachEdit_controller/<?php echo $value['id_sach'] ?>">Sửa</a>
-                </div>
-            </div>
-            
-          <?php endforeach ?> 
+   <div class="a"style="height: 414px;width: 600px;margin-left: 100px;margin-top: 100px">
+     <form action="<?php echo base_url(); ?>index.php/Docgia_controller/editDocgia_controller" id="books-info" method="post" enctype="multipart/form-data">
+      <?php foreach ($showData_edit as $key => $value): ?>
+        
+     
+              <div class="input-group mb-3" hidden="">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text" id="basic-addon1"> ID Độc Giả</span>
+                  </div>
+                  <input name="iddocgia" id="iddocgia" type="text" class="form-control"value='<?php echo $value['id_docgia'] ?>' placeholder="" aria-label="nhapid" aria-describedby="basic-addon1">
+               </div>
+                   <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text" id="basic-addon1">Tên Độc Giả</span>
+                  </div>
+                  <input name="tendocgia" id="tendocgia" type="text" class="form-control"value='<?php echo $value['ten_docgia'] ?>' placeholder="" aria-label="nhập tên sách" aria-describedby="basic-addon1">
+               </div>
+  
+  
+               <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text" id="basic-addon1">Đơn Vị </span>
+                  </div>
+                  <input name="donvi" id="donvi" type="text" class="form-control"value='<?php echo $value['donvi_docgia'] ?>' placeholder=" " aria-label="username" aria-describedby="basic-addon1">
+               </div>
+               <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Ngày Làm Thẻ </span>
+                  </div>
+                  <input name="ngaylamthe" id="ngaylamthe" type="date" class="form-control"value='<?php echo $value['ngaylamthe_docgia'] ?>' placeholder="" aria-label="username" aria-describedby="basic-addon1">
+               </div>
+                <input type="submit"  class="btn btn-primary btn-sm" value="Save" />
+                 <?php endforeach ?>
+              </form>
         </div>
 
-      </div>
 
     
 
